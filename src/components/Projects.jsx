@@ -90,31 +90,31 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="w-full border-t border-slate-800 bg-slate-950 py-20 px-4 md:px-8 lg:px-12 relative overflow-hidden">
+    <section id="projects" className="w-full border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 py-20 px-4 md:px-8 lg:px-12 relative overflow-hidden transition-colors duration-300">
       {/* Background Glow */}
-      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-cyan-600/5 blur-[120px]" />
+      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-cyan-400/10 blur-[120px]" />
 
       <div className="mx-auto max-w-7xl relative z-10">
         <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
-            <p className="mb-3 inline-block rounded-full bg-cyan-900/40 px-3 py-1.5 font-mono text-xs font-semibold uppercase tracking-widest text-cyan-300 border border-cyan-800/50">
+            <p className="mb-3 inline-block rounded-full bg-cyan-50 dark:bg-cyan-900/30 px-3 py-1.5 font-mono text-xs font-semibold uppercase tracking-widest text-cyan-700 dark:text-cyan-300 border border-cyan-200 dark:border-cyan-800">
               Portfolio
             </p>
-            <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">Featured Projects</h2>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl lg:text-5xl">Featured Projects</h2>
           </div>
           
           {/* Slider Navigation Buttons */}
           <div className="flex gap-4">
             <button 
               onClick={prevSlide}
-              className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-700 bg-slate-800/50 text-slate-300 transition-all hover:border-cyan-500 hover:text-cyan-400 hover:shadow-[0_0_15px_rgba(34,211,238,0.2)]"
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 transition-all hover:border-cyan-400 dark:hover:border-cyan-500 hover:text-cyan-600 dark:hover:text-cyan-400 hover:shadow-lg hover:shadow-cyan-100 dark:hover:shadow-cyan-900/20"
               aria-label="Previous Project"
             >
               <FaChevronLeft className="text-xl pr-1" />
             </button>
             <button 
               onClick={nextSlide}
-              className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-700 bg-slate-800/50 text-slate-300 transition-all hover:border-cyan-500 hover:text-cyan-400 hover:shadow-[0_0_15px_rgba(34,211,238,0.2)]"
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 transition-all hover:border-cyan-400 dark:hover:border-cyan-500 hover:text-cyan-600 dark:hover:text-cyan-400 hover:shadow-lg hover:shadow-cyan-100 dark:hover:shadow-cyan-900/20"
               aria-label="Next Project"
             >
               <FaChevronRight className="text-xl pl-1" />
@@ -123,7 +123,7 @@ const Projects = () => {
         </div>
 
         {/* Sliding Window Container */}
-        <div className="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/50 shadow-2xl backdrop-blur-sm">
+        <div className="relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-xl backdrop-blur-sm">
           
           {/* Sliding Track */}
           <div 
@@ -134,54 +134,54 @@ const Projects = () => {
               <div key={index} className="w-full flex-shrink-0 flex flex-col lg:flex-row">
                 
                 {/* Image Section */}
-                <div className="lg:w-1/2 relative overflow-hidden border-b lg:border-b-0 lg:border-r border-slate-800 group bg-slate-950 flex items-center justify-center">
-                  <div className="absolute inset-0 bg-cyan-900/10 mix-blend-overlay z-10 group-hover:bg-transparent transition-all duration-500" />
+                <div className="lg:w-1/2 relative overflow-hidden border-b lg:border-b-0 lg:border-r border-slate-100 dark:border-slate-800 group bg-slate-50 dark:bg-slate-950 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-white/20 dark:bg-slate-900/40 mix-blend-overlay z-10 group-hover:bg-transparent transition-all duration-500" />
                   <img 
                     src={proj.image} 
                     alt={proj.title} 
                     className="w-full h-64 lg:h-full object-contain transition-transform duration-700 group-hover:scale-105"
                     onError={(e) => {
-                      e.target.src = 'https://via.placeholder.com/800x600/1e293b/06b6d4?text=Project+Preview'
+                      e.target.src = 'https://via.placeholder.com/800x600/f1f5f9/0ea5e9?text=Project+Preview'
                     }}
                   />
                 </div>
 
                 {/* Content Section */}
                 <div className="lg:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-                  <h3 className="mb-6 text-3xl font-bold text-white leading-tight">{proj.title}</h3>
+                  <h3 className="mb-6 text-3xl font-bold text-slate-900 dark:text-white leading-tight">{proj.title}</h3>
 
-                  <div className="mb-8 space-y-5 text-[15px] leading-relaxed text-slate-300">
+                  <div className="mb-8 space-y-5 text-[15px] leading-relaxed text-slate-600 dark:text-slate-300">
                     <div>
-                      <strong className="block mb-1 text-cyan-400 font-mono text-sm uppercase tracking-wider">The Challenge</strong>
+                      <strong className="block mb-1 text-cyan-600 dark:text-cyan-400 font-mono text-sm uppercase tracking-wider">The Challenge</strong>
                       <p>{proj.challenge}</p>
                     </div>
                     <div>
-                      <strong className="block mb-1 text-cyan-400 font-mono text-sm uppercase tracking-wider">The Action</strong>
+                      <strong className="block mb-1 text-cyan-600 dark:text-cyan-400 font-mono text-sm uppercase tracking-wider">The Action</strong>
                       <p>{proj.action}</p>
                     </div>
                     <div>
-                      <strong className="block mb-1 text-cyan-400 font-mono text-sm uppercase tracking-wider">The Result</strong>
-                      <p className="text-white font-medium">{proj.result}</p>
+                      <strong className="block mb-1 text-cyan-600 dark:text-cyan-400 font-mono text-sm uppercase tracking-wider">The Result</strong>
+                      <p className="text-slate-800 dark:text-slate-200 font-medium">{proj.result}</p>
                     </div>
                   </div>
 
                   {/* Tech Stack Chips */}
                   <div className="mb-8 flex flex-wrap gap-2">
                     {proj.tech.map((t, i) => (
-                      <span key={i} className="rounded-full bg-slate-950 px-4 py-1.5 text-xs font-medium text-cyan-300 border border-slate-700">
+                      <span key={i} className="rounded-full bg-slate-100 dark:bg-slate-800 px-4 py-1.5 text-xs font-medium text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
                         {t}
                       </span>
                     ))}
                   </div>
 
                   {/* Action Links */}
-                  <div className="mt-auto pt-6 border-t border-slate-800 flex flex-wrap gap-6">
+                  <div className="mt-auto pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-6">
                     {/* Live Demo Button - Primary */}
                     <a 
                       href={proj.live} 
                       target="_blank" 
                       rel="noreferrer"
-                      className="inline-flex items-center gap-2 text-sm font-bold text-cyan-400 hover:text-cyan-300 transition-colors"
+                      className="inline-flex items-center gap-2 text-sm font-bold text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 transition-colors"
                     >
                       <FaExternalLinkAlt className="text-lg" />
                       Live Demo
@@ -192,7 +192,7 @@ const Projects = () => {
                       href={proj.github} 
                       target="_blank" 
                       rel="noreferrer"
-                      className="inline-flex items-center gap-2 text-sm font-bold text-slate-400 hover:text-white transition-colors"
+                      className="inline-flex items-center gap-2 text-sm font-bold text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors"
                     >
                       <FaGithub className="text-xl" />
                       Source Code

@@ -1,23 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap');
 
 .portfolio-app {
-  --bg-main: #090f15;
-  --bg-soft: #0f1722;
-  --text-main: #e5edf6;
-  --text-muted: #9cadbf;
-  --title: #f4f8fd;
-  --line: #1c2a3a;
-  --card: #101a26;
-  --card-2: #0d1620;
-  --accent: #20b8d8;
-  --accent-strong: #1699b5;
-  --accent-soft: rgba(32, 184, 216, 0.16);
-  --chip-bg: #11283a;
-  --chip-line: #23455f;
-  color: var(--text-main);
+  /* --bg-main: #f8fafc;
+  --bg-soft: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --title: #0f172a;
+  --line: #cbd5e1;
+  --card: #ffffff;
+  --card-2: #f1f5f9;
+  --accent: #06b6d4;
+  --accent-strong: #0891b2;
+  --accent-soft: rgba(6, 182, 212, 0.1);
+  --chip-bg: #e0f2fe;
+  --chip-line: #bae6fd;
+  color: var(--text-main); */
   font-family: 'Sora', 'Segoe UI', sans-serif;
-  background: var(--bg-main);
+  /* background: var(--bg-main); */
 }
+
 
 .section {
   position: relative;
