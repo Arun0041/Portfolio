@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
 import { FaChevronLeft, FaChevronRight, FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import viznestImg from '../assets/viznest.png';
+import sudokuImg from '../assets/sudoku.png';
+import ayushImg from '../assets/ayush.png';
+import yourTherapistImg from '../assets/yourtherapist.png'; // Added import
+import graspImg from '../assets/grasp.png';                // Added import
+import akDebtImg from '../assets/ak debt planner.png';    // Added import
 
 const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -10,20 +16,20 @@ const Projects = () => {
       challenge: "Developing a scalable home decor platform requiring a live customization engine and dynamic product control.",
       action: "Built an Admin Dashboard, integrated Razorpay and JWT-based authentication, and deployed on Vercel and Render while optimizing MongoDB pipelines.",
       result: "Decreased fake account creation by 40% and cut data retrieval latency by 30%.",
-      tech: ["MongoDB", "Express.js", "React", "Node.js", "Tailwind CSS"],
-      github: "https://github.com/Arun0041/viznest",
-      live: "https://your-viznest-live-link.vercel.app", // <-- Update this link!
-      image: "/viznest.jpg"
+      tech: ["MongoDB", "Express.js", "React", "Node.js", "Tailwind CSS","JWT"],
+      github: "https://github.com/Arun0041/VizNest",
+      live: "https://viznest.vercel.app/", // <-- Update this link!
+      image: viznestImg
     },
     {
-      title: "Sudoku Solver Visualizer",
-      challenge: "Creating a visualization tool to clearly demonstrate how backtracking algorithms solve Sudoku puzzles.",
-      action: "Designed a dynamic grid interface for custom puzzle input and implemented robust input validation.",
-      result: "Lowered solution computation time by 35% by optimizing recursive logic with constraint propagation.",
-      tech: ["React.js", "Data Structures", "Algorithms"],
-      github: "https://github.com/Arun0041/sudoku-visualizer",
-      live: "https://your-sudoku-live-link.vercel.app", // <-- Update this link!
-      image: "/sudoku.jpg"
+      title: "YourTherapist",
+      challenge: "Developing a secure and accessible platform to connect users with mental health resources and professionals seamlessly.",
+      action: "Architected a full-stack MERN application featuring secure user authentication, robust database schemas for user profiles, and an intuitive scheduling interface.",
+      result: "Created a safe, highly responsive digital environment that streamlines the process of seeking and managing therapeutic care.",
+      tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Tailwind CSS"],
+      github: "https://github.com/ArunGautam004/YourTherapist", // <-- Update link
+      live: "https://yourtherapist.vercel.app/",       // <-- Update link
+      image: yourTherapistImg                                // Updated image reference
     },
     {
       title: "Ayush Herb Information Portal",
@@ -31,9 +37,39 @@ const Projects = () => {
       action: "Engineered a custom Admin Panel for SQL CRUD operations and introduced real-time user discussion forums.",
       result: "Saved data management time by 20%, increased user engagement by 25%, and maintained 99% uptime on InfinityFree.",
       tech: ["HTML", "Tailwind CSS", "PHP", "SQL"],
-      github: "https://github.com/Arun0041/ayush-herb",
-      live: "http://your-ayush-herb-live-link.epizy.com", // <-- Update this link!
-      image: "/ayush-herb.jpg"
+      github: "https://github.com/Arun0041/AYUSH-HERB",
+      live: "https://ayushherb.infinityfreeapp.com/", // <-- Update this link!
+      image: ayushImg
+    },
+    {
+      title: "Sudoku Solver Visualizer",
+      challenge: "Creating a visualization tool to clearly demonstrate how backtracking algorithms solve Sudoku puzzles.",
+      action: "Designed a dynamic grid interface for custom puzzle input and implemented robust input validation.",
+      result: "Lowered solution computation time by 35% by optimizing recursive logic with constraint propagation.",
+      tech: ["React.js", "Data Structures", "Algorithms"],
+      github: "https://github.com/Arun0041/Sudoku-Solver",
+      live: "https://sudoku-solver-theta-nine.vercel.app/", // <-- Update this link!
+      image: sudokuImg
+    },
+    {
+      title: "Grasp AI",
+      challenge: "Building an intelligent educational tool capable of understanding, processing, and responding to complex user queries in real-time.",
+      action: "Integrated the Google Gemini API to power the core natural language processing engine.",
+      result: "Delivered a seamless AI-driven application that provides highly accurate, context-aware responses with minimal latency.",
+      tech: ["Javascript", "Google Gemini API", "Tailwind CSS"],
+      github: "https://github.com/Arun0041/grasp-ai", // <-- Update link
+      live: "https://arun.is-great.net/",   // <-- Update link
+      image: graspImg                                   // Updated image reference
+    },
+    {
+      title: "AK Debt Planner",
+      challenge: "Creating a comprehensive personal finance tool to help users strategize and visualize their debt repayment paths.",
+      action: "Engineered a dynamic dashboard using React, leveraging the Google Gemini API to generate personalized financial insights based on user input data.",
+      result: "Empowered users with actionable, AI-driven debt management plans within an intuitive and secure full-stack environment.",
+      tech: ["Javascript", "Google Gemini API", "Tailwind CSS"],
+      github: "https://github.com/Arun0041/AI-DEBT-PLANNER", // <-- Update link
+      live: "https://arun.42web.io/?i=1",            // <-- Update link
+      image: akDebtImg                                       // Updated image reference
     }
   ];
 
@@ -98,12 +134,12 @@ const Projects = () => {
               <div key={index} className="w-full flex-shrink-0 flex flex-col lg:flex-row">
                 
                 {/* Image Section */}
-                <div className="lg:w-1/2 relative overflow-hidden border-b lg:border-b-0 lg:border-r border-slate-800 group">
-                  <div className="absolute inset-0 bg-cyan-900/20 mix-blend-overlay z-10 group-hover:bg-transparent transition-all duration-500" />
+                <div className="lg:w-1/2 relative overflow-hidden border-b lg:border-b-0 lg:border-r border-slate-800 group bg-slate-950 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-cyan-900/10 mix-blend-overlay z-10 group-hover:bg-transparent transition-all duration-500" />
                   <img 
                     src={proj.image} 
                     alt={proj.title} 
-                    className="w-full h-64 lg:h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-64 lg:h-full object-contain transition-transform duration-700 group-hover:scale-105"
                     onError={(e) => {
                       e.target.src = 'https://via.placeholder.com/800x600/1e293b/06b6d4?text=Project+Preview'
                     }}

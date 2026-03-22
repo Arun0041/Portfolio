@@ -20,7 +20,7 @@ const Contact = () => {
         {/* Download CV Button */}
         <div className="mb-16 flex justify-center">
           <a 
-            href="/resume.pdf" 
+            href="/Arun_CV.pdf" 
             download="Arun_Sharma_Resume.pdf"
             className="group flex items-center gap-3 rounded-full bg-cyan-500 px-8 py-4 font-bold text-slate-950 transition-all duration-300 hover:-translate-y-1 hover:bg-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)]"
           >

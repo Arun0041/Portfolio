@@ -60,7 +60,7 @@ export default function Navbar() {
         {/* Right Side Actions */}
         <div className="hidden lg:flex items-center gap-4">
           <a 
-            href="/resume.pdf" 
+            href="/Arun_CV.pdf" 
             download="Arun_Sharma_Resume.pdf"
             className="group relative inline-flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-white font-semibold text-sm transition-all hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:scale-105 active:scale-95"
           >
@@ -96,7 +96,7 @@ export default function Navbar() {
           ))}
           
           <a 
-            href="/resume.pdf" 
+            href="/Arun_CV.pdf" 
             download="Arun_Sharma_Resume.pdf"
             className="mt-4 flex items-center gap-2 px-8 py-3 bg-cyan-500 rounded-full text-slate-950 font-bold text-lg hover:bg-cyan-400 transition-colors"
           >
