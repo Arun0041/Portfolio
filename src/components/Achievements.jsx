@@ -30,10 +30,7 @@ const Achievements = () => {
     <section id="achievements" className="w-full border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 py-24 px-4 md:px-8 lg:px-12 relative overflow-hidden transition-colors duration-300">
       <div className="mx-auto max-w-7xl relative z-10">
         
-        <div className="mb-16 text-center">
-          <p className="mb-3 inline-block rounded-full bg-cyan-50 dark:bg-cyan-900/30 px-3 py-1.5 font-mono text-xs font-semibold uppercase tracking-widest text-cyan-700 dark:text-cyan-300 border border-cyan-200 dark:border-cyan-800">
-            Milestones
-          </p>
+        <div className="mb-16 text-left">
           <h2 className="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl lg:text-5xl">Key Achievements</h2>
         </div>
 

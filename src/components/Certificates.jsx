@@ -13,7 +13,7 @@ const Certificates = () => {
     <section id="certificates" className="w-full border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/50 py-14 px-4 md:px-8 lg:px-12 relative overflow-hidden transition-colors duration-300">
       <div className="mx-auto max-w-7xl relative z-10">
         
-        <div className="mb-16 text-center">
+        <div className="mb-16 text-left">
           {/* <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-100 text-3xl text-emerald-600 border border-emerald-200">
             <FaCertificate />
           </div>

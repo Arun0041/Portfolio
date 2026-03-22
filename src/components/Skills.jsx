@@ -60,10 +60,7 @@ const Skills = () => {
       <div className="mx-auto max-w-7xl">
         
         {/* Section Header */}
-        <div className="mb-16 text-center md:text-left">
-          <p className="mb-3 inline-block rounded-full bg-cyan-100 dark:bg-cyan-900/30 px-3 py-1.5 font-mono text-xs font-semibold uppercase tracking-widest text-cyan-700 dark:text-cyan-300 border border-cyan-200 dark:border-cyan-800">
-            My Arsenal
-          </p>
+        <div className="mb-16 text-left">
           <h2 className="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl lg:text-5xl">Technical Skills</h2>
         </div>
 

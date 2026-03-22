@@ -14,6 +14,25 @@ export default function Navbar({ theme, toggleTheme }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Prevent background scrolling when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
+  // Auto-close mobile menu when switching to desktop width
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const navLinks = [
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
@@ -39,9 +58,6 @@ export default function Navbar({ theme, toggleTheme }) {
           <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 text-white font-bold text-xl shadow-lg shadow-cyan-500/20 transition-transform group-hover:scale-110 group-hover:rotate-3">
             A
           </div>
-          <span className="font-[Fraunces] text-xl font-bold tracking-wide text-slate-800 dark:text-slate-100 group-hover:text-cyan-600 transition-colors">
-            Arun<span className="text-cyan-500">.</span>
-          </span>
         </a>
 
         {/* Desktop Navigation - Pill Style */}
@@ -73,7 +89,7 @@ export default function Navbar({ theme, toggleTheme }) {
             className="group relative inline-flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-white font-semibold text-sm transition-all hover:shadow-lg hover:shadow-cyan-500/30 hover:scale-105 active:scale-95"
           >
             <FaDownload className="text-xs" />
-            <span>Resume</span>
+            <span>CV</span>
           </a>
         </div>
 
@@ -82,6 +98,7 @@ export default function Navbar({ theme, toggleTheme }) {
           <button
             onClick={toggleTheme}
             className="p-2 text-slate-600 dark:text-slate-300 hover:text-cyan-600 transition-colors"
+            aria-label="Toggle Theme"
           >
             {theme === 'dark' ? <FaSun size={20} /> : <FaMoon size={20} />}
           </button>
@@ -97,28 +114,31 @@ export default function Navbar({ theme, toggleTheme }) {
 
         {/* Mobile Menu Overlay */}
         <div 
-          className={`fixed inset-0 z-40 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl transition-all duration-500 flex flex-col items-center justify-center gap-8 ${
-            isOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
+          className={`absolute left-4 right-4 top-full mt-3 z-40 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl shadow-xl transition-all duration-300 origin-top ${
+            isOpen ? 'opacity-100 visible scale-100 translate-y-0' : 'opacity-0 invisible pointer-events-none scale-95 -translate-y-2'
           }`}
         >
-          {navLinks.map((link) => (
+          <div className="flex flex-col gap-2 p-3">
+            {navLinks.map((link) => (
+              <a 
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="rounded-xl px-4 py-3 text-base font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
+              >
+                {link.name}
+              </a>
+            ))}
+            
             <a 
-              key={link.name}
-              href={link.href}
+              href="/Arun_CV.pdf" 
+              download="Arun_Sharma_Resume.pdf"
               onClick={() => setIsOpen(false)}
-              className="text-2xl font-semibold text-slate-700 dark:text-slate-200 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
+              className="mt-2 flex items-center justify-center gap-2 rounded-xl bg-cyan-500 px-6 py-3 text-white font-bold hover:bg-cyan-600 transition-colors shadow-lg shadow-cyan-500/30"
             >
-              {link.name}
+              <FaDownload /> Download Resume
             </a>
-          ))}
-          
-          <a 
-            href="/Arun_CV.pdf" 
-            download="Arun_Sharma_Resume.pdf"
-            className="mt-4 flex items-center gap-2 px-8 py-3 bg-cyan-500 rounded-full text-white font-bold text-lg hover:bg-cyan-600 transition-colors shadow-lg shadow-cyan-500/30"
-          >
-            <FaDownload /> Download Resume
-          </a>
+          </div>
         </div>
       </div>
     </nav>

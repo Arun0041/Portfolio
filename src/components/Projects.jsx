@@ -96,10 +96,7 @@ const Projects = () => {
 
       <div className="mx-auto max-w-7xl relative z-10">
         <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <div>
-            <p className="mb-3 inline-block rounded-full bg-cyan-50 dark:bg-cyan-900/30 px-3 py-1.5 font-mono text-xs font-semibold uppercase tracking-widest text-cyan-700 dark:text-cyan-300 border border-cyan-200 dark:border-cyan-800">
-              Portfolio
-            </p>
+          <div className="text-left">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl lg:text-5xl">Featured Projects</h2>
           </div>
           

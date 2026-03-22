@@ -74,16 +74,16 @@ const Hero = () => {
         </div>
 
         {/* Left side - Content */}
-        <div className="w-full md:max-w-2xl text-center md:text-left">
+        <div className="w-full text-left md:max-w-2xl">
           <div className="mb-6 inline-flex rounded-full bg-cyan-50 dark:bg-cyan-950/30 px-4 py-2 font-mono text-sm uppercase tracking-widest text-cyan-600 dark:text-cyan-400 border border-cyan-200 dark:border-cyan-900/50">
             Hello, I&apos;m
           </div>
 
           <h1 className="mb-4 text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white transition-colors">
-            Arun <span className="text-cyan-600 dark:text-cyan-400">Sharma.</span>
+            Arun <span className="text-cyan-600 dark:text-cyan-400">Sharma</span>
           </h1>
 
-          <div className="mb-6 flex h-[40px] items-center justify-center md:justify-start gap-2">
+          <div className="mb-6 flex h-[40px] items-center justify-start gap-2">
             <span className="text-2xl md:text-3xl font-semibold text-slate-600 dark:text-slate-400 transition-colors">
               {typedRole}
               <span className="ml-1 inline-block animate-pulse text-cyan-600 dark:text-cyan-400">|</span>
@@ -95,7 +95,7 @@ const Hero = () => {
             solving complex algorithmic challenges, and shipping production-ready products with measurable impact.
           </p>
 
-          <div className="mb-12 flex flex-wrap justify-center md:justify-start gap-4">
+          <div className="mb-12 flex flex-wrap justify-start gap-4">
             <a href="#projects" className="rounded-lg bg-cyan-600 dark:bg-cyan-500 px-8 py-3 font-bold text-white transition-colors hover:bg-cyan-700 dark:hover:bg-cyan-400 shadow-lg shadow-cyan-600/20 dark:shadow-cyan-500/20">
               View My Work
             </a>
@@ -105,11 +105,20 @@ const Hero = () => {
             </a>
           </div>
 
-          <div className="flex w-full overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white/60 dark:bg-slate-900/60 backdrop-blur-sm shadow-sm transition-colors">
+          <div className="grid w-full grid-cols-2 overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white/60 dark:bg-slate-900/60 backdrop-blur-sm shadow-sm transition-colors md:grid-cols-4">
             {STATS.map(({ value, label }, i) => (
-              <div key={label} className={`flex-1 p-4 text-center ${i < STATS.length - 1 ? 'border-r border-slate-200 dark:border-slate-800' : ''}`}>
-                <div className="text-xl md:text-2xl font-bold text-cyan-600 dark:text-cyan-400 mb-1">{value}</div>
-                <div className="font-mono text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400">{label}</div>
+              <div
+                key={label}
+                className={`p-4 text-center ${
+                  i % 2 === 0 ? 'border-r border-slate-200 dark:border-slate-800 md:border-r' : 'md:border-r md:border-slate-200 md:dark:border-slate-800'
+                } ${
+                  i < 2 ? 'border-b border-slate-200 dark:border-slate-800 md:border-b-0' : ''
+                } ${
+                  i === STATS.length - 1 ? 'md:border-r-0' : ''
+                }`}
+              >
+                <div className="mb-1 text-xl font-bold text-cyan-600 dark:text-cyan-400 md:text-2xl">{value}</div>
+                <div className="font-mono text-[10px] leading-4 uppercase tracking-wider text-slate-500 dark:text-slate-400 md:text-xs">{label}</div>
               </div>
             ))}
           </div>

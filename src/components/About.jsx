@@ -8,10 +8,7 @@ const About = () => {
 
       <div className="relative z-10 w-full px-4 py-16 sm:px-6 sm:py-20 md:px-8 md:py-24 lg:px-12 lg:py-32">
         <div className="mx-auto w-full max-w-7xl">
-          <div className="mb-10 sm:mb-12 md:mb-14 lg:mb-16">
-            <p className="mb-3 inline-block rounded-full bg-cyan-50 dark:bg-cyan-950/30 px-3 py-1.5 font-mono text-xs font-semibold uppercase tracking-widest text-cyan-700 dark:text-cyan-300 border border-cyan-200 dark:border-cyan-800/50">
-              Who I Am
-            </p>
+          <div className="mb-10 text-left sm:mb-12 md:mb-14 lg:mb-16">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl md:text-5xl lg:text-6xl transition-colors">
               About Me
             </h2>
