@@ -16,7 +16,6 @@ const Contact = () => {
             Currently looking for new opportunities. Whether you have a question, a project idea, or just want to say hi, I'll try my best to get back to you!
           </p>
         </div>
-
         {/* Download CV Button */}
         <div className="mb-16 flex justify-center">
           <a 
