@@ -95,7 +95,7 @@ const Hero = () => {
             solving complex algorithmic challenges, and shipping production-ready products with measurable impact.
           </p>
 
-          <div className="mb-12 flex flex-wrap justify-start gap-4">
+          <div className="mb-12 flex flex-wrap justify-center gap-4 md:justify-start">
             <a href="#projects" className="rounded-lg bg-cyan-600 dark:bg-cyan-500 px-8 py-3 font-bold text-white transition-colors hover:bg-cyan-700 dark:hover:bg-cyan-400 shadow-lg shadow-cyan-600/20 dark:shadow-cyan-500/20">
               View My Work
             </a>
