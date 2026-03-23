@@ -13,9 +13,9 @@ const Projects = () => {
   const projectList = [
     {
       title: "VizNest - Home Decor Store",
-      challenge: "Developing a scalable home decor platform requiring a live customization engine and dynamic product control.",
-      action: "Built an Admin Dashboard, integrated Razorpay and JWT-based authentication, and deployed on Vercel and Render while optimizing MongoDB pipelines.",
-      result: "Decreased fake account creation by 40% and cut data retrieval latency by 30%.",
+      challenge: "Home decor buyers often find it difficult to discover and apply the right customization options for their style before making a purchase.",
+      action: "Designed an interactive customization journey with live product controls, built an Admin Dashboard for faster catalog updates, and integrated Razorpay with JWT-based authentication.",
+      result: "Made customization easier to discover and use, increased buyer confidence before checkout, reduced fake account creation by 40%, and cut data retrieval latency by 30%.",
       tech: ["MongoDB", "Express.js", "React", "Node.js", "Tailwind CSS","JWT"],
       github: "https://github.com/Arun0041/VizNest",
       live: "https://viznest.vercel.app/", // <-- Update this link!
@@ -23,9 +23,9 @@ const Projects = () => {
     },
     {
       title: "YourTherapist",
-      challenge: "Developing a secure and accessible platform to connect users with mental health resources and professionals seamlessly.",
-      action: "Architected a full-stack MERN application featuring secure user authentication, robust database schemas for user profiles, and an intuitive scheduling interface.",
-      result: "Created a safe, highly responsive digital environment that streamlines the process of seeking and managing therapeutic care.",
+      challenge: "People seeking mental health support face friction in finding trusted professionals, booking sessions, and managing care in one secure place.",
+      action: "Built a full-stack MERN platform with secure authentication, verified therapist and patient profile flows, and an intuitive appointment scheduling experience.",
+      result: "Reduced booking friction, improved trust through secure access and structured profiles, and enabled users to manage therapy journeys from one reliable dashboard.",
       tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Tailwind CSS"],
       github: "https://github.com/ArunGautam004/YourTherapist", // <-- Update link
       live: "https://yourtherapist.vercel.app/",       // <-- Update link
@@ -33,9 +33,9 @@ const Projects = () => {
     },
     {
       title: "Ayush Herb Information Portal",
-      challenge: "Launching a centralized information platform requiring an efficient Content Management System.",
-      action: "Engineered a custom Admin Panel for SQL CRUD operations and introduced real-time user discussion forums.",
-      result: "Saved data management time by 20%, increased user engagement by 25%, and maintained 99% uptime on InfinityFree.",
+      challenge: "Reliable AYUSH herb information is often scattered, making it difficult for users and admins to access, verify, and update knowledge quickly.",
+      action: "Developed a structured content portal with an SQL-powered Admin Panel for fast CRUD operations and added real-time discussion forums for community interaction.",
+      result: "Improved information accessibility and update speed, reduced admin data management effort by 20%, increased user engagement by 25%, and maintained 99% uptime.",
       tech: ["HTML", "Tailwind CSS", "PHP", "SQL"],
       github: "https://github.com/Arun0041/AYUSH-HERB",
       live: "https://ayushherb.infinityfreeapp.com/", // <-- Update this link!
@@ -43,9 +43,9 @@ const Projects = () => {
     },
     {
       title: "Sudoku Solver Visualizer",
-      challenge: "Creating a visualization tool to clearly demonstrate how backtracking algorithms solve Sudoku puzzles.",
-      action: "Designed a dynamic grid interface for custom puzzle input and implemented robust input validation.",
-      result: "Lowered solution computation time by 35% by optimizing recursive logic with constraint propagation.",
+      challenge: "Students and beginners find it hard to understand how backtracking works in practice without an interactive, step-by-step visual explanation.",
+      action: "Built an interactive grid for custom puzzle input, visualized each solving step, and strengthened input validation with optimized backtracking logic.",
+      result: "Made backtracking easier to understand for learners and reduced solution computation time by 35% through constraint-based optimizations.",
       tech: ["React.js", "Data Structures", "Algorithms"],
       github: "https://github.com/Arun0041/Sudoku-Solver",
       live: "https://sudoku-solver-theta-nine.vercel.app/", // <-- Update this link!
@@ -53,9 +53,9 @@ const Projects = () => {
     },
     {
       title: "Grasp AI",
-      challenge: "Building an intelligent educational tool capable of understanding, processing, and responding to complex user queries in real-time.",
-      action: "Integrated the Google Gemini API to power the core natural language processing engine.",
-      result: "Delivered a seamless AI-driven application that provides highly accurate, context-aware responses with minimal latency.",
+      challenge: "Learners often spend too much time searching across sources instead of getting instant, context-aware explanations tailored to their questions.",
+      action: "Integrated the Google Gemini API into a focused question-answer workflow and refined prompts to generate clearer, context-aware explanations.",
+      result: "Cut research friction for learners by delivering faster, more relevant answers in a single interface with low-latency AI responses.",
       tech: ["Javascript", "Google Gemini API", "Tailwind CSS"],
       github: "https://github.com/Arun0041/grasp-ai", // <-- Update link
       live: "https://arun.is-great.net/",   // <-- Update link
@@ -63,9 +63,9 @@ const Projects = () => {
     },
     {
       title: "AK Debt Planner",
-      challenge: "Creating a comprehensive personal finance tool to help users strategize and visualize their debt repayment paths.",
-      action: "Engineered a dynamic dashboard using React, leveraging the Google Gemini API to generate personalized financial insights based on user input data.",
-      result: "Empowered users with actionable, AI-driven debt management plans within an intuitive and secure full-stack environment.",
+      challenge: "Many people struggle to prioritize multiple debts and create realistic repayment plans, leading to confusion, stress, and poor financial decisions.",
+      action: "Built a React-based planning dashboard that captures debt inputs, prioritizes repayment paths, and uses the Google Gemini API for personalized financial guidance.",
+      result: "Helped users turn scattered debt data into clear repayment strategies, reducing decision confusion and improving confidence in monthly financial planning.",
       tech: ["Javascript", "Google Gemini API", "Tailwind CSS"],
       github: "https://github.com/Arun0041/AI-DEBT-PLANNER", // <-- Update link
       live: "https://arun.42web.io/?i=1",            // <-- Update link
