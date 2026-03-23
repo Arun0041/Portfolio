@@ -11,7 +11,7 @@ import Contact from './components/Contact';
 import './App.css';
 
 function App() {
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
 
   useEffect(() => {
     if (theme === 'dark') {
