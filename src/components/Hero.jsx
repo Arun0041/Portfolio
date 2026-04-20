@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const PROFILE_IMAGE = 'https://media.licdn.com/dms/image/v2/D5603AQG6Dxxt3pRa-g/profile-displayphoto-scale_200_200/B56ZlR8AJkHAAY-/0/1758016312894?e=1778112000&v=beta&t=RLC9YE8-VLotzfWnFYMXEIoGHLrF3UcIXfeowzdwvsQ';
+const PROFILE_IMAGE = 'https://res.cloudinary.com/drz68l0zo/image/upload/v1776706169/yourtherapist_profiles/z7ovj6nkvedev9ceed4o.jpg';
 
 const ROLES = [
   { label: 'Software Engineer' },
